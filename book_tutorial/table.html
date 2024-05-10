@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table 태그</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            border-collapse:  collapse; /*두겹을 하나의 겹침선으로 표현(충돌시켜서)*/
+            
+        }
+        th, td{
+            width: calc(100% / 6);
+            padding: 20px 0; /* <- 탑 바텀 20px에 레프트 라이트 0 / 아니면 padding-top: 20px; padding-bottom: 20px;*/
+           
+        }
+        td{
+            text-align: center;
+        }
+        #time_tbl{
+            margin: 0 auto;
+            width: 1000px;
+        }
+        summary{
+            display: none;
+        }
+        .bg_pink{/* kebab_case cs camel Case */
+            background-color: pink;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>표 태그</h1>
+    <table id="time_tbl">
+        <caption>4학년 대학교 시간표</caption>
+        <summary>4학년의 대학교 시간표입니다.</summary>
+        <tr>
+            <th>요일<br>시간</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </tr>   
+        <tr>
+            <td>1교시</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+        </tr>   
+        <tr>
+            <td>2교시</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+        </tr>   
+        <tr>
+            <td>3교시</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+        </tr>   
+        <tr>
+            <td>4교시</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+        </tr>   
+        <tr class="bg_pink">
+            <td>점심</td>
+            <td>점심시간</td>
+            <td>점심시간</td>
+            <td>점심시간</td>
+            <td>점심시간</td>
+            <td>점심시간</td>
+        </tr>   
+        <tr>
+            <td>5교시</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>컴퓨터프로그래밍</td>
+            <td>사고와표현</td>
+        </tr>   
+        <tr>
+            <td>6교시</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>컴퓨터프로그래밍</td>
+            <td>사고와표현</td>
+        </tr>   
+        <tr>
+            <td>7교시</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+        </tr>   
+        <tr>
+            <td>8교시</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+            <td>공강</td>
+        </tr>   
+    </table>
+</body>
+</html>

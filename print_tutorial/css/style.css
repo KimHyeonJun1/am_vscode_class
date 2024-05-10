@@ -1,0 +1,124 @@
+@charset "utf-8";
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.brand-logo { /* flex container : 부모 */
+    display: flex;
+    justify-content: center;
+}
+.promotion {
+    position: relative; 
+    height: 335px;
+    
+    
+}
+.promo_model, .promo_bg{
+    position: absolute;
+  
+    
+    
+}
+.promo_model{
+    z-index:10; 
+    right:32%;
+
+}
+.promo_bg{
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0,111,255);
+}
+
+
+#gnb{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    height: 60px; 
+    align-items: center; /* padding 으로도 사용 가능*/
+}
+#gnb a:hover{
+    color: #01ccff;
+}
+/*==========================요금표, 출연진표 스타일=======================*/
+#fee, #cast{
+    width: 600px;
+    margin: 0 auto;
+}
+#fee, th, td{
+   border: 1px solid black;
+}
+th, td{
+    text-align: center;
+    padding: 15px 0;
+    vertical-align: middle;
+}
+th{
+    font-size: 15px;
+    background-color: aquamarine;
+    width: calc(100% / 4);
+}
+caption{
+    font-size: 18px;
+    font-weight: bold; /*글꼴 -두껍게*/
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+#fee th{
+    font-weight: bold;
+}
+#cast{
+    margin-top: 20px;
+}
+#cast th{
+    font-weight: bold;
+}
+#cast td{
+    text-align: left;
+}
+
+
+#snb{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fafafa;
+    font-size: 13px;
+    color: #666;
+    border-top: 1px gray solid;
+    margin-top: 50px;
+}
+
+#snb a:hover{
+    color: #01ccff;
+
+}
+.site_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    
+
+}
+.address{
+    color: #999999;
+    font-size: 13px;
+    padding-bottom: 1rem;
+}
+.copy_sign{
+    color: #999999;
+    font-size: 12px;
+}
+
