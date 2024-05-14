@@ -1,4 +1,38 @@
 @charset "utf-8";
+/*========== header top=========*/
+.container{
+    border-bottom: 1px solid gray;
+    margin-bottom: 23px;
+}
+#header_top{
+    
+    max-width: 1440px;
+    margin: 0 auto; 
+    
+    
+}
+.d_flex{
+    display: flex;
+    
+    
+}
+.justify-between{
+    justify-content: space-between;
+    
+}
+.items_center{
+  align-items: center;
+}
+.gap_1 {
+    gap: 1rem;
+
+}
+.gap_2{
+    gap: 2rem;
+
+}
+
+/*===========header==========*/
 a {
     text-decoration: none;
     color: inherit;
@@ -84,7 +118,21 @@ caption{
     text-align: left;
 }
 
-
+/*=========메인 컨텐츠==========*/
+.contents{
+    font-size: 16px;
+    line-height: 21.4px;
+}
+.contents h2, h3{
+    font-size: 20px;
+    margin: 20px 0;
+}
+.mx_auto{
+    margin: 0 auto;
+}
+.w800{
+    max-width: 800px;
+}
 #snb{
     display: flex;
     justify-content: center;
