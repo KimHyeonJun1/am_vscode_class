@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNL(Saturday Nihgt Life)</title>
+    <title>SNL(Saturday Night Life)</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -25,10 +25,10 @@
                         <a href="index.html">처음으로</a>
                     </li>
                     <li>
-                        <a href="join.html">로그인</a>
+                        <a href="sign_in.html">로그인</a>
                     </li>
                     <li>
-                        <a href="sign_in.html">회원가입</a>
+                        <a href="join.html">회원가입</a>
                     </li>
                 </ul>
             </div>
@@ -37,7 +37,7 @@
    
     <header>
         <div class="brand-logo">
-            <img src="images/logo.png" alt="snl">
+            <a href="index.html"><img src="images/logo.png" alt="snl"></a>
         </div>
         <!-- /.brand-logo -->
         <div class="promotion">
@@ -69,8 +69,41 @@
     <main>
         <section>
             <article>
-               <h2>회원 로그인</h2>
-                <form action=""></form>
+                <h2 class="article_title">회원정보를 입력해주세요</h2>
+                
+                    <div id="signup_form" class="w400 mx_auto">
+                        <div class="d_flex items_center gap_1 my-10">
+                            <label for="">아이디(이메일)</label>
+                            <input type="email" class="flex_1 py-1">
+                        </div>
+                        <div class="d_flex items_center gap_1 my-10">
+                            <label for="">비밀번호</label>
+                            <input type="password" class="flex_1 py-1">
+                        </div>
+                        <div class="d_flex items_center gap_1 my-10">
+                            <label for="user_pwd">비밀번호 확인</label>
+                            <input type="password" id="user_pwd" name="user_pwd" class="flex_1 py-1">
+                        </div>
+                        <div class="d_flex items_center gap_1 my-10">
+                            <label for="user_name">이름</label>
+                            <input type="text" id="user_name" name="user_name" class="flex_1 py-1">
+                        </div>
+                        <div class="d_flex items_center gap_1 my-10">
+                            <label for="cell_phone">휴대폰 번호</label>
+                            <input type="tel" id="cell_phone" class="flex_1 py-1">
+                        </div>
+                        <div class="d_flex items_center text-center gap_1 my-10">
+                            <label class="flex_1">
+                            <input type="checkbox" checked="ture" class="agree">모두 확인하였으며 동의합니다.
+                        </label>
+                        </div>
+                        <div class="d_flex items_center gap_1 my-10 justify-center">
+                            <input type="submit" class="px-2 py-1 bg-blue text-white rounded" value="로그인">
+                            <a href="#">ID/PW찾기 </a>
+                        </div>
+                    </div>
+                
+          
             </article>
         </section>
         

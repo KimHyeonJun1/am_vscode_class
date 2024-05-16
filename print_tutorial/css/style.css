@@ -1,4 +1,56 @@
 @charset "utf-8";
+/*==========layout common=============*/
+.d_flex{
+    display: flex;
+}
+.flex_1{
+    flex: 1;
+}
+.justify-between{
+    justify-content: space-between;
+    
+}
+.justify-center{
+    justify-content: center;
+    
+ }
+.text-center{
+    text-align: center;
+ }
+.items_center{
+  align-items: center;
+}
+.gap_1 {
+    gap: 1rem;
+
+}
+.gap_2{
+    gap: 2rem;
+
+}
+.my-10{
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
+.px-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.py-1{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.bg-blue{
+    background-color: blue;
+}
+.text-white{
+    color: white;
+}
+.rounded{
+    border-radius: 20%;
+}
+
+
 /*========== header top=========*/
 .container{
     border-bottom: 1px solid gray;
@@ -11,26 +63,7 @@
     
     
 }
-.d_flex{
-    display: flex;
-    
-    
-}
-.justify-between{
-    justify-content: space-between;
-    
-}
-.items_center{
-  align-items: center;
-}
-.gap_1 {
-    gap: 1rem;
 
-}
-.gap_2{
-    gap: 2rem;
-
-}
 
 /*===========header==========*/
 a {
@@ -133,6 +166,31 @@ caption{
 .w800{
     max-width: 800px;
 }
+/*===================로그인 폼 ============*/
+.article_title{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+legend{
+    position: absolute;
+    font-size: 0px;
+}
+.input{
+    border: 1px solid lightgray;
+}
+.w400{
+    max-width: 400px;
+}
+
+label{
+    width: 80px;
+    
+}
+    
+
 #snb{
     display: flex;
     justify-content: center;
