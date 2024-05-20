@@ -71,37 +71,40 @@
             <article>
                 <h2 class="article_title">회원정보를 입력해주세요</h2>
                 
-                    <div id="signup_form" class="w400 mx_auto">
-                        <div class="d_flex items_center gap_1 my-10">
-                            <label for="">아이디(이메일)</label>
-                            <input type="email" class="flex_1 py-1">
+                    <form method="post" action="http://localhost:3000/sign_up">
+                        <div id="signup_form" class="w400 mx_auto">
+                            <div class="d_flex items_center gap_1 my-10">
+                                <label for="user_id">아이디(이메일)</label>
+                                <input type="email" id="user_id" name="user_id" class="flex_1 py-1">
+                            </div>
+                            <div class="d_flex items_center gap_1 my-10">
+                                <label for="user_pwd1">비밀번호</label>
+                                <input type="password" id="user_pwd1" name="user_pwd1" class="flex_1 py-1">
+                            </div>
+                            <div class="d_flex items_center gap_1 my-10">
+                                <label for="user_pwd2">비밀번호 확인</label>
+                                <input type="password" id="user_pwd2" name="user_pwd2" class="flex_1 py-1">
+                            </div>
+                            <div class="d_flex items_center gap_1 my-10">
+                                <label for="user_name">이름</label>
+                                <input type="text" id="user_name" name="user_name" class="flex_1 py-1">
+                            </div>
+                            <div class="d_flex items_center gap_1 my-10">
+                                <label for="user_phone">휴대폰 번호</label>
+                                <input type="tel" id="user_phone" name="user_phone" class="flex_1 py-1">
+                            </div>
+                            <div class="d_flex items_center text-center gap_1 my-10">
+                               <a href="#">이용약관 전문보기</a>
+                                <label class="flex_1">
+                                <input type="checkbox" checked="true" class="agree">모두 확인하였으며 동의합니다.
+                            </label>
+                            </div>
+                            <div class="d_flex items_center gap_1 my-10 justify-center">
+                                <input type="submit" class="px-2 py-1 bg-blue text-white rounded" value="로그인">
+                                <a href="#">ID/PW찾기 </a>
+                            </div>
                         </div>
-                        <div class="d_flex items_center gap_1 my-10">
-                            <label for="">비밀번호</label>
-                            <input type="password" class="flex_1 py-1">
-                        </div>
-                        <div class="d_flex items_center gap_1 my-10">
-                            <label for="user_pwd">비밀번호 확인</label>
-                            <input type="password" id="user_pwd" name="user_pwd" class="flex_1 py-1">
-                        </div>
-                        <div class="d_flex items_center gap_1 my-10">
-                            <label for="user_name">이름</label>
-                            <input type="text" id="user_name" name="user_name" class="flex_1 py-1">
-                        </div>
-                        <div class="d_flex items_center gap_1 my-10">
-                            <label for="cell_phone">휴대폰 번호</label>
-                            <input type="tel" id="cell_phone" class="flex_1 py-1">
-                        </div>
-                        <div class="d_flex items_center text-center gap_1 my-10">
-                            <label class="flex_1">
-                            <input type="checkbox" checked="ture" class="agree">모두 확인하였으며 동의합니다.
-                        </label>
-                        </div>
-                        <div class="d_flex items_center gap_1 my-10 justify-center">
-                            <input type="submit" class="px-2 py-1 bg-blue text-white rounded" value="로그인">
-                            <a href="#">ID/PW찾기 </a>
-                        </div>
-                    </div>
+                    </form>
                 
           
             </article>
