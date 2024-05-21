@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현준에어비엔비</title>
+    <!--부트스트렙 css cdn-->
+</head>
+<body>
+    <h1 class="d-none">현준 에어비엔비</h1>
+    <header></header>
+    <section class="page_title"></section>
+    <main>
+        <article>
+            <h2>예약하기</h2>
+            <form action="off" method="post" action="http://localhost:3000/create">
+                <fieldset>
+                    <legend class="d-none">booking</legend>
+                    <div class="reservation_container">
+                        <div>
+                            <div class="row">
+                                <label for="re_date">예약일</label>
+                                <input type="date" name="re_date" id="re_date">
+                            </div>
+                            <button><img src="images/Group.png"></button>
+                            <div class="row">
+                                <label for="re_count">인원수</label>
+                                <input type="date" name="re_count" id="re_count">
+                            </div>
+                            <div class="row">
+                                <label for="re_name">고객명</label>
+                                <input type="date" name="re_name" id="re_name">
+                            </div>
+                            <div class="row">
+                                <label for="re_phone">연락처</label>
+                                <input type="date" name="re_phone" id="re_phone">
+                            </div>
+                            <div class="row">
+                                <label for="re_account">환불계좌</label>
+                                <input type="date" name="re_account" id="re_account">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </article>
+    </main>
+    <footer></footer>
+</body>
+</html>

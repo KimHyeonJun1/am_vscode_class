@@ -6,7 +6,22 @@ const port = 3000
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
-
+let count =0;
+const max = 10; //최대 예약가능 객실수
+const reservations = [
+{
+  id: count++,
+  name:'홍길동',
+  phone: '01012345678',
+  account: {
+    bank: '광주은행',
+    number: '1000-2000-101-3',
+    owner: '홍길동'
+  },
+  datetime: '2024-05-25T09:00.00.000Z',
+  total: 4,
+}
+];
 
 app.get('/', (req, res) => {
         res.send('<h1>Hello World!</h1>')
@@ -33,7 +48,7 @@ app.post('/sign_in', (req, res) => {
       return res.redirect('/');// 로그인 성공하면 메인페이지 이동
     })
 
-app.post('/sign_up', (req, res) => {
+app.post('/create', (req, res) => {
         //DB 연결: oracle, Mysql, mognDB, Firebase, ...etc
         //const dbconn = mysql.connect('localhost:3000/users')
         //DB에 있는 데이터를 입력한 값과 비교(ID, phone : pk.uk)해서 이상이 없으면 데이터 입력처리
@@ -42,7 +57,7 @@ app.post('/sign_up', (req, res) => {
        //dbconn.runscript(sql);
        return res.status(302).json({
         success: 'ok',
-        message: '회원가입 성공'
+        message: '예약 성공'
        })
        })      
       
