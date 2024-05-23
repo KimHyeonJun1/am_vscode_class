@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* common style*/
+html{
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "montserrat", "Noto Sans KR", sans-serif;
+    font-size: .8rem;
+}
+
+/* design class*/
+
+.container{
+    max-width: 1320px;
+}
+.container-fluid{
+    width: 100%;
+}
+.position-relative{
+    position: relative;
+}
+.pos-bottom{
+    background-color: rgba(0,0,0,.8);
+    font-size: 1rem;
+    color: #fff;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+}
+.mx-auto{
+    margin: 0 auto;
+}
+.ml-auto{
+    margin-left: auto;
+}
+.d-none{
+    display: none;
+}
+.d-flex{
+     display: flex;
+}
+.fs-1{
+    font-size: 1.6rem; /*32px*/
+}
+.fs-2{
+    font-size: 1.5rem; /*30px*/
+}
+.fs-6{
+    font-size: .65rem;
+}
+.my-1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.my-2{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.py-1{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.pt-1{
+    padding-top: 1rem;
+}
+.pt-5{
+    padding-top: 5rem;
+}
+.pb-5{
+    padding-bottom: 5rem;
+}
+.gap-1{
+    gap: 1rem;
+}
+.gap-2{
+    gap: 2rem;
+}
+.gap-3{
+    gap: 3rem;
+}
+.justify-content{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.fw-bold{
+    font-weight: 600;
+}
+.fw-bolder{
+    font-weight: 900;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+.text-rowercace{
+    text-transform: lowercase;
+}
+.text-capitalize{
+    text-transform: capitalize;
+}
+.text-center{
+    text-align: center;
+}
+.items-center{
+    align-items: center;
+}
+#gnb li, .Links{
+    color: #fff;
+}
+#gnb li a:hover{
+    color: #58c8f6
+}
+.bg-header{
+    opacity: .3;
+    background-color: #000;
+}
+.position-absolute{
+    position:absolute;
+}
+
+.img-fluid{
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+.balloon{
+    left: 100px;
+    top: 100px;
+}
+.slogan{
+    left: 700px;
+    top: 400px;
+}
+.w1000{
+    width: 1000px;
+}
+.co-contents{
+    height: 515px; /* dafault: auto*/
+    background-image: url("../images/corightbg.jpg"), url("../images/coleftbg.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position:  500px 0, 0 0;
+    position: relative;
+}
+.co-flight{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+   transform: translateX(-50%);
+}
+.co-text{
+    position: absolute;
+    width: 40%;
+    left: 55%;
+    top: 50%;
+    font-size: .8rem;
+    letter-spacing: -1px;
+    line-height: 1.9; 
+}
+.bg-meeting{
+    background: #fff url("../images/bus_bg.jpg") no-repeat center / cover;
+    
+    min-height: 500px;
+
+}
+.half-up{
+    top: -27px;
+}
