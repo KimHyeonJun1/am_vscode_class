@@ -1,0 +1,82 @@
+@charset "utf-8";
+html{
+    font-size: 20px;
+}
+body{
+    font-family: "Maven Pro", "Noto Sans KR", sans-serif;
+    font-size: .7rem;
+    font-weight: 400;
+    font-variant: normal;
+    line-height: 1.5; /*1.4~1.6 사이를 일반적으로 많이씀*/
+    /* background 처럼 축약*/
+    /* font:normal .7rem / 1.5 400 "Maven Pro", "Noto Sans KR", sans-serif; */
+}
+/* side */
+#side{
+    z-index: 1000;
+    background-color: rgba(0,0,0,1);
+    right: -300px;
+    height: 100%; /*100vh 도 가능*/
+    width: 300px;
+    transition: all ease-in-out;
+    /*display : none*/
+    
+    
+}
+
+
+/* site main */
+.float-header{
+    width: 1320px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    
+}
+
+.bg-hero{
+    background: url("../images/visual_bg.jpg") no-repeat center / cover;
+    min-height: 950px;
+}
+.slogan-text{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /*가운데에 지정하는 공식*/
+}
+.bg-wave{
+    background: url("../images/system_bg.jpg") no-repeat center / cover;
+}
+.bg-water{
+    background-color: #1e598c;
+}
+.bg-bubble{
+    background: url("../images/product_bg.gif") no-repeat center / cover;
+}
+.emg-title{
+    padding-top: 2px;
+}
+.over-img:hover{
+    opacity: .5;
+}
+.fs-7{
+    font-size: 0.725rem;
+}
+.w600{
+    width: 600px;
+}
+.product{
+    height: 442px;
+}
+.w120{
+    width: 120px;
+}
+
+.bg-aside{
+    min-height: 420px;
+     background-image: url("../images/company.png"), url("../images/company_bg.jpg");
+     background-position: right bottom, center center;
+     background-repeat: no-repeat, no-repeat;
+}
+.pt-8{
+    padding-top: 8rem;
+}
