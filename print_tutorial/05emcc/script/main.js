@@ -25,5 +25,29 @@ menuBtn.addEventListener("click", function(){
 // #side 를 찾아서 클릭하면, display를 none으로 조작
 sideMenu.addEventListener("click", function(){
     this.style.right = "-300px"
-}) //this는 보통 나 자신을 가리키는 대명사 (sideMenu 또는 document.querySeletor("#side")로 지정하기보다)
+}); //this는 보통 나 자신을 가리키는 대명사 (sideMenu 또는 document.querySeletor("#side")로 지정하기보다)
 // siteMenu =document.querySelector("#side")
+
+var detailBtn = document.querySelector("#detail");
+var detail = document.querySelector("#product_detail");
+// console.log(detailBtn); //HTML 형식으로 출력
+// console.dir(detailBtn); //객체 형식으로 출력
+console.dir(detailBtn);
+detailBtn.addEventListener("click", showPopup);
+function showPopup(){
+    //1. 레이어 구조를 작성 : HTML
+    //2. 제어를 위한 ID를 추가 : #modal
+    //3. DOM 선택 메소드 : .querySelector()로 #modal 선택 & 이벤트 추가
+   detail.classList.remove("d-none");
+   // document.querySelector("#product_detail").classList.remove("d-none");
+    //4. 스타일 제어 : 숨김 -> 표시
+    //5. 닫기 구조를 작성 : HTML
+    //6. 제어를 위한 ID를 추가 : #close_modal
+    //7. DOM 선택 메소드 : #close_modal 선택 & 이벤트 추가
+
+};
+var closeBtn = document.querySelector("#closer");
+closeBtn.addEventListener("click", hidePopup);
+function hidePopup(){
+    detail.classList.add("d-none");
+}
