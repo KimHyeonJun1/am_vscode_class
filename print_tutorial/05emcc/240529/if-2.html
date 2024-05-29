@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리 연산자로 조건체크하기</title>
+</head>
+<body>
+    <h1>논리 연산자 OR, NOT 으로 조건 체크하기 실습</h1>
+    <form id="check_form">
+        <fieldset>
+            <legend>논리 연산자로 조건 체크하기</legend>
+            <ul>
+                <li>
+                    <input type="text" name="num1" id="num1">
+                </li>
+                <li>
+                    <input type="text" name="num2" id="num2">
+                </li>
+            </ul>
+            <input type="submit" value="체크">
+        </fieldset>
+    </form>
+    <script>
+        // let num1 = prompt("50 미만의 숫자를 입력하세요");
+        // let num2 = prompt("50 미만의 숫자를 입력하세요");
+        // if(num1 < 10 || num2 < 10){
+        //     alert("숫자 2개중 최소한 하나는 10 미만 입니다")
+        // }else{
+        //     alert("숫자 2개중 10 미만인 수가 없습니다")
+            
+        // } <-- 이게 아래쓴것보다 훨씬 쓰기 편함
+        const checkForm = document.querySelector("#check_form");
+        checkForm.addEventListener("submit", function(){
+            let num1 = document.querySelector("#num1").value;
+            let num2 = document.querySelector("#num2").value;
+            if(num1 < 10 || num2 < 10){
+                alert("숫자 2개중 최소한 하나는 10 미만 입니다")
+            }else{
+                alert("숫자 2개중 10 미만인 수가 없습니다")
+            }
+
+        })
+    </script>
+</body>
+</html>

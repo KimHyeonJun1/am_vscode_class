@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이 계산기</title>
+</head>
+<body>
+    <script>
+        //나이 = 올해 년도 - 태어난 년도 + 1;
+        // 폼 vs prompt();
+        let  birthYear = prompt("태어난 년도를 입력하세요"); //입력
+        let currentYear = 2024;
+        let age = (currentYear - birthYear) +1;
+        //발트인 객체에서 제공한는 메소드
+        //.alert().console.log(), document.write() :  출력
+        //.confirm(), prompt() : 입력메소드
+
+        //document.wirhte() : body 영역에 string, 태그가 포함된 string을 출력
+        document.write("현재 년도 : " + currentYear, "<br>");
+        document.write("태어난 년도 : " + birthYear, "<br>");
+        document.write("계산된 나이 : " + age);
+       
+
+    </script>
+</body>
+</html>
