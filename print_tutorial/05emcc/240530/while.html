@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while반복문 : 팩토리얼</title>
+</head>
+<body>
+    <h1>팩토리얼이란?</h1>
+    <p>수학에서, 자연수의 계승 또는 팩토리얼 ~~~~~</p>
+    <script>
+        //2! = 2x1=2
+        //3! = 3x2x1=6 ....
+
+        //1. factorial 함수 (클래스/패키지) ==> 사용
+        // └JS : Math 객체에는 지수,로그,제곱근 등만 있음..
+        // └
+        //2. 없다면? 재귀함수 ==> factorial 구현
+
+
+        let num = Number(prompt("자연수를 입력하세요", "예) 3을 입력하면 3!의 값 6이 출력됨"));
+        console.log(typeof num, num);
+        //.reduce() : 내부에 원소를 모두 연산
+         let numArray = [];
+         for(let i = 1; i <= num; i++){
+             numArray.push(i);
+         }
+         console.log(numArray);
+         let factorial = numArray.reduce((prev, current) => prev * current);
+         document.write(`입력한 수 ${num}의 팩토리얼 결과 :  ${factorial}`);
+    </script>
+</body>
+</html>

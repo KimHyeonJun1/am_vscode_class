@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+    <style>
+        body{
+            background-color: pink;
+            column-rule-color: white;
+        }
+        .room{
+            color: yellowgreen;
+            font-size: 1.3rem;
+            
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let session =  prompt("관심 세션을 선택하세요!", "1-마케팅, 2-개발, 3-디자인");
+        switch ( session){
+            case "1":document.write("<p>마케팅 세션은 <strong class=\"room\">202호</strong>에서 진행됩니다.</p>");
+            break;
+            case "2": document.write("<p>마케팅 세션은 <strong class=\"room\">203호</strong>에서 진행됩니다.</p>");
+            break;
+            case "3": document.write("<p>마케팅 세션은 <strong class=\"room\">204호</strong>에서 진행됩니다.</p>");
+            break;
+            default: alert("세션은 1,2,3중 하나를 입력해야 합니다..");
+        }
+        
+        // if(session ==="1"){
+        //     alert("마케팅 세션은 201호 입니다.");
+        // }else if(session === "2"){
+        //     alert("개발 세션은 203호 입니다");
+        // }else if (session === "3"){
+        //     alert("디자인 세션은 204호 입니다");
+        // }else{
+        //     alert("관심 세션은 1,2,3 중 하나를 입력해야 합니다.");
+        //     location.reload(); //window -> 주소창과 관련된 객체
+        // }
+    </script>
+    <p>시설 이용안내를 원하시면 사무실(062-123-1234)로 연락 주세요.
+    </p>
+</body>
+</html>

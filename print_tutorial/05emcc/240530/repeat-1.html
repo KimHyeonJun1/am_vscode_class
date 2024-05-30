@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문의 필요성</title>
+</head>
+<body>
+    <h1>반복문 없이 1부터 5까지 숫자 더하기</h1>
+    <nav>
+<ul>
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+</ul>
+</nav>
+    <script>
+        const menuLI = document.querySelectorAll("li")
+        const pages = ["cafe", "blog", "map", "sports"]
+           menuLI.forEach(function(li, number){
+           
+               li.addEventListener("click", function(){
+                console.log(number);
+                //location.href = pages[index];
+                location.href = "https://" + pages[number] + ".naver.com";
+               // console.log("이동할 페이지 주소: " + pages[number]);
+            })
+           })
+        
+        //자바스크립트 반복문
+        // 1) for(초깃값; 조건식; 증감식){..반복 코드}
+        // 1-1) for ~ of : 배열에 대한 반복문
+        // 1-2) for ~ in : 객체에 대한 반복문
+        // 1-3) .map(), filter(), .reduce() : 모든 원소를 순회하며 반복작업(return 있는)
+        // 1-4) .forEach() : 모든 원소를 순회하며 반복(return 없는)
+        // 2) while (조건식)  {..반복 코드.. 증감식}
+        // 3) do while (조건식) {..반복 코드}
+        // consol.log(fruits[0]); //= ["수박", "참외", "망고", "자몽"]; //Array :배열
+        /*const human = { // Object : 객체
+            name: "gildong",
+            email: "hong@naver.com",
+            phone: "010-1234-5678",
+            gender: "male",
+            city: "YeongGwang"
+        }
+        console.log(human["name"]);
+        console.log(human.name);
+        for(let key in human){
+            document.write(human[key], "<br>");
+            //document.write(human.key)
+        };*/
+        const odd = [1,3,5,7,9,12]; // even : 짝수
+        let result = odd.reduce(function(prev, current){
+            return prev + current;
+        })
+        console.log("resulte : " + result);
+
+ 
+        // let result = odd.filter(value => value < 5); //짧게 한줄로 줄였을때  return이 생략되어 있는거임
+        // console.log("resulte : " + result);
+
+        // let result = odd.map(function(value, index, array){
+        //    return value * 2;
+        // });
+        // for(let fruit of fruits){
+        //     document.write("내가 좋아하는 과일은 " + fruit + "입니다", "<br>");
+        // }
+
+        // let sum = 0;
+        // for(let i = 1; i <= 10; i++){
+        //   sum = sum + i; // sum += i
+        //   //  document.write("<p>"+(i+1)+"</p>");
+        //   // document.write(`<p>안녕하세요, ${i+1}번째 고객님!</p>`);
+        // }
+        // document.write("<p>1부터 10까지의 숫자 합 : " + sum + "</p>");
+
+    </script>
+</body>
+</html>

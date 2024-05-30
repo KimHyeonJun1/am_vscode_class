@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입장객수에 따른 좌석배치 프로그램</title>
+</head>
+<body>
+    <h1>자리 배치도</h1>
+    <script>
+        let total_visitors = prompt("총 입장객수는 몇명입니까?", "예) 20명이면 20이라고 입력");
+        let num_of_line = prompt("한줄에 앉을 입장객수는 몇명입니까?");
+        //20명이 1줄에 5명씩 앉아야 한다 ==> 20/5 = 4줄
+        let num_of_rows= total_visitors/num_of_line;
+        document.write("<p>모두" + num_of_rows + "개의 줄이 필요합니다.</p>");
+        //템플릿 문자 (Template Literal) : ' (백틱)에 변수는 ${변수명}으로 문자열내에 포함'
+        document.write(`<p>모두 ${num_of_rows}개의 줄이 필요합니다.</p>`);
+    </script>
+</body>
+</html>
