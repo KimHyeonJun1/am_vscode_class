@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 안에서만 쓸수 있는 지역변수</title>
+</head>
+<body>
+    <h1>var를 사용한 변수의 특징</h1>
+    <p>함수 내부에 사용하는 변수에 대해서 알아봅시다</p>
+    <script>
+        // function addNumber(){
+        //     sum = 10 + 20;
+        // }
+        // addNumber();
+        // console.log(sum)
+//p.519 var 예약어를 사용한 지역변수와 전역변수
+function addNumber(){
+    var sum = 10 +20 ;
+    multi = 10*20;
+}
+    addNumber();
+    // console.log(sum);
+    console.log(multi);
+    </script>
+</body>
+</html>

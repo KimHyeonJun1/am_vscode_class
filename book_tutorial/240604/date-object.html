@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성자</title>
+    <style>
+        .box{
+            border: 1px solid gray;
+            width: 80px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.250rem;
+        }
+        .d-flex{
+            display: flex;
+        }
+        .gap-1{
+            gap: 1rem;
+        }
+</style>
+</head>
+<body>
+    <h1>시간/날짜 객체 생성하기</h1>
+    <div class="clock d-flex gap-1">
+        <div id="hours" class="box">시</div>
+        <div id="minutes" class="box">분</div>
+        <div id="seconds" class="box">초</div>
+        
+    </div>
+    <script>
+        // 시계 만들어보기
+        //  console.dir(hours); //내부에 컨텐츠를 작성할때 사용할 수 있는 프로퍼티 - .innerText, .innerHTML | .textContents
+        function printClock(){ //함수 선언(=일반 함수)
+            let now = new Date();
+            let nowHours = now.getHours();
+            let nowMinutes = now.getMinutes();
+            let nowSeconds = now.getSeconds();
+            const hours = document.querySelector("#hours");
+            const minutes = document.querySelector("#minutes");
+            const seconds = document.querySelector("#seconds");
+            hours.innerText = nowHours;
+            minutes.innerText = nowMinutes;
+            seconds.innerText = nowSeconds;
+      }
+      printClock(); // 함수 호출
+      //setInterval(함수, 시간)반복해서 시간단위만큼 호출하는 함수
+      setInterval(printClock, 1000); // 1000ms : ms1/1000초()
+    </script>
+</body>
+</html>

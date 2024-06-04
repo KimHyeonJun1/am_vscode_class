@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수</h1>
+    <p>변수 : 데이터를 저장하는 메모리상의 공간, 프로그래밍 실행동중 변할수도 있음</p>
+    <p>함수 : 데이터가 아닌 실행코드를 저장한는 공간</p>
+    <h2>alert() 함수 | window 객체에 정의된 함수(=메소드: 객체내의 함수)</h2>
+    <p>window 객체에 정의된 함수 : 내장 객체(bulit-in Object)에 정의되어 있는 함수</p>
+    <h2>사용자 정의 함수</h2>
+    <p>함수는 한번 선언하면, 언제든 재 사용이 가능 => 코드를 줄일수 있음</p>
+    <script>
+        // 두 수를 더하는 함수 만들기
+        //  1) function 키워드 : 함수 정의시
+        //  2) 함수명 : 예약어를 피하되 하는일이 명확하게 네이밍(합성어 사용)
+        //             function stringToNumber(){}
+        //  3) 함수명() : <-- 함수를 호출
+        //  4) 함수명1(또다른 함수명2); <-- 콜백함수, 함수1실행후 함수2실행(=순서대로)
+        // = 함수 호이스팅 : 끝어올리다? 낚시하는 그림 : (hoisting)
+        // I. 일반함수 : 함수 이름을 작명해서 함수를 정의하는 방식
+        // II,익명함수 : 함수의 이름이 없다 <==>변수에 할당해서 , 변수명으로 함수를 참조하는 방식
+        // III. 화살표 함수 : 일반함수를 () =>형태로 마치 화살표(Arrow)같은 형태로 단축하는 방식
+        // ※ 일반함수 vs 화살표 함수 차이 : this 라는 키워드 ( 호출하는 주체가 자동으로 this 바인드)
+
+        //p.514 두 수를 더하는 함수 만들기
+        //함수, 파라미터 a,b 정의
+        // q1. 사용자가 입력한 두 값을 덧셈한뒤, alert()를 이용해 결과를 출력
+        //prompt() : String 또는 Null 반환
+        let num1 = Number(prompt("첫번째 값을 입력하세요"));
+        let num2 = Number(prompt("두번째 값을 입력하세요"));
+        function addNumber(a, b){ //일반 함수
+            return a+b;
+        }
+        let addNumber = function(a, b){ //익명 함수
+            return a+b;
+        }
+        let addNumber = (a, b) => { //화살표 함수
+            return a+ b;
+        }
+       
+        
+        //함수 호출
+        let result = addNumber(num1,num2);
+        alert("두 수의 합: " + result);
+    </script>
+</body>
+</html>

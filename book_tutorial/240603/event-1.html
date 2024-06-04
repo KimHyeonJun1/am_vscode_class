@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트와 이벤트 처리기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        .nav{
+            display: flex;
+            height: 40px;
+            align-items: center;
+            gap: 1rem;
+
+        }
+        .nav li {
+            flex: 1;
+            border: 1px solid gray;
+            text-align: center;
+            padding:  15px 0;;
+            
+        }
+        .nav li a{
+            display: block;
+            height: 100%;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+        #box{
+            background-Color: orange;
+            height: 100px;
+            margin-top: 1rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>이벤트</h1>
+    <p>event, 사건/사고로 웹서비스에서 마우스 클릭, 키보드 조작등의 행위를
+        하면 이벤트가 발생되었다 라고 봅니다.
+    </p>
+    <h2>이벤트 처리기</h2>
+    <p>ebent가 발생하면, 해당하는 어떠한 처리(=기능, function / 함수)를
+    하는건데, 보통 핸들러 라고도 하고 요즘에는 리스너 라고도 하는 
+    이벤트 처리기를 사용합니다.</p>
+    <h3>버튼을 클릭하면, 알림 창 표시하기</h3> <!--p.543-->
+    <ul class="nav">
+        <li><a href="#" id="greenBt" class="selected">Green</a></li>
+        <li><a href="#" id="orangeBt" >Orange</a></li>
+        <li><a href="#" id= "purpleBt">Purple</a></li>
+    </ul>
+    <div id="box"></div>
+    <script src="menu.js"></script>
+</body>
+</html>

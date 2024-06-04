@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>시간/날짜 객체 생성하기</h1>
+    <script>
+        //Array 객체
+        // 1.배열객체 생성방법
+        let fruits = ["banana", "mango", "apple"]; //자동으로 Array 객체 사용해서 객체생성
+        let friends = new Array("cat", "dog", "giraff"); // new 생성자 문법
+        console.log(fruits.length); //3
+        //3. array + for loop => for ~ of
+        for(let fruit of fruits){
+            console.log(`내가 좋아하는 과일은 ${fruit} 입니다`)
+        }
+        //                  (뒷쪽추가/제거)       (앞쪽 추가/제거)           
+        //4. array method : push, pop,                unshift, shift 
+        fruits.push("strawberry");
+        fruits.push("tomato");
+        fruits.push("watermelon");
+        console.log(fruits);
+
+        let lastItem = fruits.pop();
+        console.log(fruits);
+        console.log(lastItem);
+
+        fruits.unshift(lastItem);
+        console.log(fruits);
+        let firstItem = fruits.unshift();
+        console.log(firstItem);
+
+        console.log(fruits);
+        console.log(fruits.sort((current, next) => current.length - next.length))
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 당첨자 뽑기</title>
+</head>
+<body>
+    <h1>이벤트 당첨자 뽑기</h1>
+    <script>
+        //1부터 100까지 랜덤번호 뽑기
+      /*   Math.random() : 0 ~1 사이의 난수
+        Math.random() * 100 +1 -1 에서 100까지의 난수 */
+        let nums = [];
+        let max = Number(prompt("응모자 수는?"));
+        let count = Number(prompt("당첨자 수는?"));
+        for(i = 0; i<count; i++){
+            nums.push(Math.floor(Math.random() * max + 1));
+        }
+        document.write(`<p>당첨자는 ${nums} 번 입니다.</p>`);
+    </script>
+</body>
+</html>
