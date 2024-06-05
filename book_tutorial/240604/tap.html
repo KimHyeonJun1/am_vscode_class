@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>탭 메뉴</title>
+    <style>
+        body{
+            background: lightgray;
+        }
+        .tabs{
+            width: 500px;
+          /*   height: 420px; */
+            background: white;
+            border-radius: 3rem;
+            box-shadow: 10px 10px 10px 0 rgba(0,0,0, .3);
+            padding: 50px;
+        }
+        button{
+            background: white;
+            border: 0;
+            font-size: 1.250rem;
+            text-transform: uppercase;
+            color: gray;
+            padding: 1rem ;
+        }
+        .hide{
+            display: none;
+        }
+        .active{
+            border-bottom: 3px solid lightblue 
+        }
+    </style>
+  </head>
+  <body>
+    <div class="tabs">
+      <div class="tab_btn">
+        <button id="code_bt" class="active">code</button>
+        <button id="about_bt">about</button>
+      </div>
+      <div class="tab_box">
+        <div id="code_tap">
+          <h2>This is code section</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At, facilis
+            deleniti. Hic, aliquam excepturi dignissimos voluptatum dolore ad
+            minima ullam!
+          </p>
+        </div>
+        <div id="about_tap" class="hide">
+          <h2>This is about section</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga earum
+            enim minima laudantium nesciunt quam expedita quidem sit aliquid
+            soluta!
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+        //about 누르면 할일
+        //1. about버튼을  DOM선택
+        const aboutBt = document.querySelector("#about_bt");
+        const codeBt = document.querySelector("#code_bt");
+        const aboutTab = document.querySelector("#about_tap");
+        const codeTab = document.querySelector("#code_tap");
+        //2. 이벤트 리스너 추가
+        aboutBt.addEventListener("click", function(){
+            //2-1. active 클래스를 추가
+            this.classList.add("active");
+            codeBt.classList.remove("active");
+            aboutTab.classList.remove("hide");
+            codeTab.classList.add("hide");
+
+        })
+        codeBt.addEventListener("click", function(){
+            //2-1. active 클래스를 추가
+            this.classList.add("active");
+            aboutBt.classList.remove("active");
+            aboutTab.classList.add("hide");
+            codeTab.classList.remove("hide");
+
+        })
+        function changeBt(){
+
+        }
+        function changeBox(){
+            
+        }
+    </script>
+  </body>
+</html>
