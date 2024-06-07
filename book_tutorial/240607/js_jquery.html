@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js vs jquery</title>
+</head>
+<body>
+    <h1>jQuery</h1>
+    <p>jQuery는 java script 라이브러리 입니다. 자바스크립트보다 적은 코드, 많은 처리를 담보하며
+        20년 가까이 인기를 누렸으나 한동안 뜸해진 버전업과 새로운 기능추가가 없어 Vue, React, Angular와 같은 자바스크립트보다프레임워크에 밀렸다가 최근 v4.0베타 릴리즈를
+        알려왔습니다.
+    </p>
+    <h2>jQuery의 특징, 장점</h2>
+    <ol>
+        <li>가볍고 빠르다</li>
+        <li>CSS3 호환성</li>
+        <li>크로스브라우저(브라우저간 호환성) 지원</li>
+    </ol>
+    <h3>jQuery 사용하기</h3>
+    <button id="change_bt">배경색 적용하기</button>
+    <!-- jQuery 문법 해석을 위한 라이브러리(CDN) 연결 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        //$ : document.querySelector()
+        // .on() : .addEventListerner()
+        // .css() : documnet.style.스타일속성
+        $("#change_bt").on("click", changeBg);
+        function changeBg(){
+            $("h3").css("background-color", "green");
+        }
+        // 비교
+         const changeBt = document.querySelector("#change_bt");
+         changeBt.addEventListener("click", changeColor);
+         function changeColor(){
+            let H3 = document.querySelector("h3");
+            H3.style.backgruondColor = "green";
+         }
+    </script>
+</body>
+
+</html>

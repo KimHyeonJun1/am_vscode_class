@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기존 프로젝트에 리엑트 추가하기</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+   <div id="root">
+
+   </div>
+   <script>
+    const root = document.querySelector("#root");
+    const h1 = React.createElement("h1",{style: {color: "tomato"}}, "Hello, React!  ");
+    ReactDOM.createRoot(root).render(h1);
+   
+   </script>
+</body>
+</html>

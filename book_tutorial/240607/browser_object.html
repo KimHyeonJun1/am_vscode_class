@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 오브젝트</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+        #popup{
+            position: absolute;
+            background: yellowgreen;
+            color: white;
+            padding: 2rem;
+            width: 400px;
+            height: 360px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>내장 객체 : BOM</h1>
+    <p>자바스크립트는 크게 세가지 파트 즉, 첫번째! Core, 두번째 DOM, 세번째 BOM(browser Object Model)로 구성되어 있습니다.</p>
+    <h2>브라우저와 관련된 객체(p.576)</h2>
+    <h3>브라우저 창을 열기/닫기</h3>
+    <div id="popup" class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, nobis.
+        <button class="closer">레이어 닫기</button>
+    </div>
+    <button class="opener">레이어 열기</button>
+   <script src="main.js"></script>
+</body>
+</html>
