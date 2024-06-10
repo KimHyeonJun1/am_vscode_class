@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.d-flex{
+    display: flex;
+}
+.gap-2{
+    gap: 2rem;
+}
+.items_big{
+    min-height: 300px;
+}
+.items_big img{
+    width: 400px;
+    height: 300px;
+}
+.items_small img{
+    width: 130px;
+    height: 130px;
+}

@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+body{
+    background: yellowgreen;
+}
+
+.container{
+    display: flex;
+    gap: 1rem;
+    height: 300px;
+}
+.box{
+    display: flex;
+    height: 300px;
+    overflow: hidden;
+}
+.box p {
+    background-color: white;
+}
+.box > * {
+    background: white;
+}
+/*  p.396 Media Query 구문
+    미디어란? PC, 스마트폰, 태블릿, PDA, 프로젝터,,, 등등 화면 출력장치(또는 음성 출력장치)
+ */
+
+ /* @media screen and (max-width: 1120px){   /*max는 큰값을 위에서부터 아래로 min은 반대로 작은값을 위에서부터*/
+ 
+ @media screen and (max-width: 760px) {
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+ }
+ @media screen and (max-width: 480px) {
+    .container{
+        height: auto;
+    }
+    .box{
+        height: auto;
+        flex-direction: column;
+       
+    }
+    .box > p{
+        height: 300px;
+        
+    }
+ }

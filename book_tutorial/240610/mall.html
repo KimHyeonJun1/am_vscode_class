@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Mall</title>
+    <link rel="stylesheet" href="css/coffee.css">
+</head>
+<body>
+    <h1>에디오피아 커피</h1>
+    <div class="container d-flex gap-2">
+        <div class="items">
+            <div class="items_big">
+                <img src="https://picsum.photos/400/300" alt="placeholder">
+            </div>
+            <div class="items_small">
+                <img src="https://picsum.photos/id/15/400/300" data-id="15" alt="placeholder s1">
+                <img src="https://picsum.photos/id/25/400/300" data-id="25" alt="placeholder s2">
+                <img src="https://picsum.photos/id/35/400/300" data-id="35" alt="placeholder s3">
+            </div>
+        <div class="info">
+            <p>상품명 : 에디오피아 게뎁</p>
+            <p>판매가 : 9,000원</p>
+            <p>배송비 : 3,000원 <span>(50,000원 이상 구매시 배송비 무료)</span></p>
+            <p>적립금 : 180원(2%)</p>
+            <p>로스팅 : 2019.06.17</p>
+            <button>장바구니 담기</button>
+            <p><a href="#">상세 설명 보기</a></p>
+        </div>
+    </div>
+    <script>
+        const nowItem = {
+            item_name: "에디오피아 커피",
+            item_id: 'ID123456789',
+            item_in_date: '2024-03-10',
+            item_count : 1000,
+            item_provider: '한국커피노동조합',
+            item_license : '에디오피타',
+            item_price: 10000,
+            item_unit : 'bag',
+
+        }
+        const smallItems = document.querySelectorAll(".items_small > img");
+        smallItems.forEach(item => {
+        item.addEventListener("click", changePic);
+       });
+      /*  p.611 changePic 함수 정의 참고
+       change + Pic 
+       용도 : 작은 이미지 클릭시, 큰이미지로 변경 */
+       function changePic(){
+        // 클릭한 엘리먼트(=요소)를 this
+        let picId = this.dataset.id;
+        let newPic = `https://picsum.photos/id/${picId}/400/300`;
+        const big_img = document.querySelector(".items_big img");
+        big_img.setAttribute("src", newPic);
+       /*  let newSrc = this.src; */
+        //큰 사진의 src로 변경/조작
+       /*  const bigImg = document.querySelector(".items_big img")
+        bigImg.setAttribute("src", newSrc); */
+       } 
+       const basket = document.querySelector(".info button");
+       basket.addEventListener("click", storeItem);
+       function storeItem(){
+        // 어디에 저장? 실제로는 서버, 하지만, 현재는 브라우저 내에
+        // cookie(수 kb), localStorage(수 MB), indexDB(수백 MB)
+         // 무엇을? 상품 ID상품 Count
+         // 나머지는? 서버에 상품Name, 상품입고Date, 상품Suplier 서버에 있음.
+
+         //그리고 나서 저장을 하고! 
+
+         //곧바로 결제할지, 장바구니로 이동할지 물어보기
+         let user = confirm("장바구니에 상품이 담겼습니다. \n장바구니로 이동하시겠습니까?");
+         user ? location.href ="https://www.naver.com" : null;
+
+       }
+    </script>
+</body>
+</html>
