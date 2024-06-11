@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM에서 노드 추가/삭제</title>
+</head>
+<body>
+    <h1>DOM에서 노드 추가, 삭제하기 (p.624)</h1>
+    <p>요즘에는 DOM에서 직접적으로 노드를 추가, 삭제하는 경우는 없고 대게는 React, vue, Angular와
+        같은 최신 UI 프레임워크/라이브러리를 활용해 vitrual DOM을 이용해 DOM을 조작합니다.
+    </p>
+    <h2>차이점</h2>
+    <p>지금까지는 자바스크립트를 이용해 CSS를 조작해서 결과적으로 HTML을 숨기거나 표시했다면,
+        이번 챕터는 직접 HTML 요소 엘리먼트를 생성하고, 어디간에 추가하거나 삭제하는 방법을 소개합니다.
+    </p>
+    <h3>Web Programming</h3>
+    <p>공부할 주제를 기록해 보세요</p>
+    <form id="subject_form" autocomplete="off">
+        <input type="text" name="subject" id="subject">
+        <button>추가</button>
+    </form>
+    <ul id="itemList">
+        <hr>
+        <p>등록된 키워드 갯수 : <span id="cnt">0</span>건</p>
+    </ul>
+    <script>
+        const subjectForm = document.querySelector("#subject_form");
+        const subjectInput = document.querySelector("#subject");
+        const itemList = document.querySelector("#itemList");
+        const cnt = document.querySelector("#cnt");
+        let counter = 0;
+        subjectInput.focus();
+
+        subjectForm.addEventListener("submit", (e) => {
+            e.preventDefault(); //데이터 전송 후 새로고침하는 기본 이벤트를 취소 메소드
+            if(subjectInput.value){ //사용자 입력값 -->콘솔에 출력해
+                counter++;
+                let li = document.createElement("li");
+                let li_text = document.createTextNode(subjectInput.value);
+                li.appendChild(li_text);
+               itemList.appendChild(li);
+               subjectInput.value = ""; //입력 폼 지우고,
+               subjectInput.focus(); //입력하도록 포커스
+               cnt.innerText = counter;
+            }else { //사용자 입력값 없으면 --> 경고
+                alert("공부할 주제를 입력하세요~");
+                subjectInput.focus();
+            }
+        })
+    </script>
+</body>
+</html>

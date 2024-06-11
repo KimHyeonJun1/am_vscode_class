@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인폼 |이벤트 제어</title>
+</head>
+<body>
+<form id="login_form" method="post">
+    <!--    1. html에서 입력폼의 데이터를 서버로 전송하는 유일한 방법 -->
+    <label for="user_id">아이디</label>
+    <input type="text" name="user_id" id="user_id">
+    <label for="user_pw">비밀번호</label>
+    <input type="text" name="user_pw" id="user_pw">
+    <button type="submit">로그인</button>
+</form>
+
+      <!---   2. AJAX(Asynchonous Javascript and XML : 비동기 자바스크립트 & ) -->
+      <script>
+        const loginForm = document.querySelector("#login_form");
+        //버트이면 ? click, 폼이면? submit 으로 처리
+        loginForm.addEventListener("submit", checkLogin);
+        function checkLogin(e){
+            e.preventDefault();
+            //서버가 준비되었나요? 그렇다면 api 주소, 포트번호를 알아야죠
+            const inputData = {
+                id: document.querySelector("#user_id").value,
+                pw: document.querySelector("#user_pw").value
+            };
+        };
+    /*     let result = fetch(JSON.stringify(inputData), "http://localhost:4000/loginCheck"); */
+       //서버 응답에 따른 후속조치 : 1_ 로그인 성공 --> 페이지 이동, 2)로그인 실패 --> 재도전
+     
+      </script>
+</body>
+</html>
